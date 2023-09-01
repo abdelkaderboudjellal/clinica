@@ -1,38 +1,1651 @@
-.App {
+/* @import url("https://fonts.googleapis.com/css?family=Nunito");
+ */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Chivo+Mono:wght@100;200;300;400;500;600;700;800;900&family=Courgette&family=Dancing+Script&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,600&family=Kalam:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Readex+Pro:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hiddenScroll {
+  overflow: hidden !important;
+}
+
+::-moz-placeholder {
+  color: #848fac;
+}
+
+::placeholder {
+  color: #848fac;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.wrapper .content {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5% 10%;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 50vw;
+  height: 70%;
+  margin: auto;
+  max-width: 100%;
+  min-width: 200px;
+}
+.wrapper .content button {
+  padding: 15px;
+  width: 150px;
+  border: 1px solid #eee;
+  background: transparent;
+  border-radius: 9px;
+  color: #333;
+  cursor: pointer;
+}
+.wrapper .content button:focus {
+  outline: none;
+}
+.wrapper .content header {
+  text-align: start;
+  width: 100%;
+}
+.wrapper .content header h1 {
+  margin-top: 0;
+  font-size: 180%;
+  color: #192252;
+}
+.wrapper .content header h4 {
+  margin-top: 0;
+  font-size: 90%;
+  color: #848fac;
+}
+.wrapper .content .social-login {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper .content .social-login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5px 0;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+}
+.wrapper .content .social-login button:first-child {
+  margin-right: 10px;
+}
+.wrapper .content .social-login button:hover {
+  background-color: #eee;
+}
+.wrapper .content .social-login button span {
+  font-size: 15px;
+  color: #070707;
+  margin-left: 5px;
+}
+.wrapper .content .login {
+  width: 100%;
+}
+.wrapper .content .or {
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+.wrapper .content .login-form {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .content .login-form .input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: "start";
+  width: 100%;
+}
+.wrapper .content .login-form .input-group input {
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid #c5d0e6;
+  background-color: #ffffff;
+  border-radius: 9px;
+  tranistion: border 0.5s;
+  -webkit-tranistion: border 0.5s;
+}
+.wrapper .content .login-form .input-group input:focus {
+  outline: 0;
+  border-color: #192252;
+}
+.wrapper .content .login-form .input-group label {
+  color: #192252;
+  font-size: 15px;
+  margin-bottom: 3px;
+  margin-left: 16px;
+  width: 100%;
+  text-align: start;
+  font-weight: 700;
+}
+.wrapper .content .login-form .input-group button {
+  background-color: #103f74;
+  border: unset;
+  color: #fff;
+  align-self: center;
+  width: 100%;
+  margin-top: 15px;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+.wrapper .content .login-form .input-group button:hover {
+  background-color: #848fac;
+}
+.wrapper .content .checkbox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  font-size: small;
+}
+.wrapper .content .checkbox a {
+  color: #103f74;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 2px 0;
+}
+.wrapper .content footer {
+  padding-top: 15px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper .content footer div {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper .content footer span {
+  font-weight: 700;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper .content-forget {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5% 10%;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 50vw;
+  height: 70%;
+  margin: auto;
+  max-width: 100%;
+  min-width: 200px;
+}
+.wrapper .content-forget button {
+  padding: 15px;
+  width: 150px;
+  border: 1px solid #eee;
+  background: transparent;
+  border-radius: 9px;
+  color: #333;
+  cursor: pointer;
+}
+.wrapper .content-forget button:focus {
+  outline: none;
+}
+.wrapper .content-forget header {
+  text-align: start;
+  width: 100%;
+}
+.wrapper .content-forget header h1 {
+  margin-top: 0;
+  font-size: 180%;
+  color: #192252;
+}
+.wrapper .content-forget header h4 {
+  margin-top: 0;
+  font-size: 90%;
+  color: #848fac;
+}
+.wrapper .content-forget header h4 span {
+  color: #192252;
+}
+.wrapper .content-forget .social-login {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper .content-forget .social-login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5px 0;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+}
+.wrapper .content-forget .social-login button:first-child {
+  margin-right: 10px;
+}
+.wrapper .content-forget .social-login button:hover {
+  background-color: #eee;
+}
+.wrapper .content-forget .social-login button span {
+  font-size: 15px;
+  color: #070707;
+  margin-left: 5px;
+}
+.wrapper .content-forget .login {
+  width: 100%;
+}
+.wrapper .content-forget .or {
+  padding: 16px 0;
+  text-align: center;
+  width: 100%;
+}
+.wrapper .content-forget .login-form {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .content-forget .login-form .input-code {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.wrapper .content-forget .login-form .input-code input {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 15px;
+  border: 1px solid #c5d0e6;
+  background-color: #ffffff;
+  border-radius: 9px;
+  text-align: center;
+  tranistion: border 0.5s;
+  -webkit-tranistion: border 0.5s;
+}
+.wrapper .content-forget .login-form .input-code input:focus {
+  outline: 0;
+  border-color: #103f74;
+}
+.wrapper .content-forget .login-form .input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: "start";
+  margin-top: 10px;
+  width: 100%;
+}
+.wrapper .content-forget .login-form .input-group input {
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid #c5d0e6;
+  background-color: #ffffff;
+  border-radius: 9px;
+  tranistion: border 0.5s;
+  -webkit-tranistion: border 0.5s;
+}
+.wrapper .content-forget .login-form .input-group input:focus {
+  outline: 0;
+  border-color: #ffffff;
+}
+.wrapper .content-forget .login-form .input-group label {
+  color: #192252;
+  font-size: 15px;
+  margin-bottom: 3px;
+  margin-left: 16px;
+  width: 100%;
+  text-align: start;
+  font-weight: 700;
+}
+.wrapper .content-forget .login-form .input-group button {
+  background-color: #103f74;
+  border: unset;
+  color: #fff;
+  align-self: center;
+  width: 100%;
+  margin-top: 15px;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+.wrapper .content-forget .login-form .input-group button:hover {
+  background-color: #848fac;
+}
+.wrapper .content-forget .checkbox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.wrapper .content-forget .checkbox a {
+  color: #103f74;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1px;
+}
+.wrapper .content-forget footer {
+  padding-top: 15px;
+  text-align: center;
+}
+.wrapper .content-forget footer div {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.wrapper .content-forget footer span {
+  font-weight: 700;
+}
+.wrapper .image {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #56ccf2;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .image header {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper .image header h1 {
+  color: #eee;
+  font-size: 200%;
+  margin-top: 6% !important;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.wrapper .image header p {
+  color: #eee;
+  font-size: 130%;
+  width: 70%;
+  margin: 2% 20%;
+  text-align: justify;
+}
+.wrapper .image header .rating1 {
+  position: absolute;
+  right: 18vw;
+  z-index: 1;
+}
+.wrapper .image header .rating2 {
+  /*    width: 50%;
+  height: 40%; */
+  position: absolute;
+  right: 3vw;
+  bottom: 2vw;
+}
+.wrapper .image main {
+  width: 100%;
+  height: 50%;
+}
+.wrapper .image main .image1 {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 41%;
+  right: 20%;
+  z-index: 1;
+  min-width: 60%;
+}
+.wrapper .image main .image2 {
+  position: absolute;
+  width: 35%;
+  height: 55%;
+  top: 50%;
+  left: 65%;
+  right: 7%;
+  z-index: 0;
+}
+.wrapper .image main .image3 {
+  z-index: 0;
+  position: absolute;
+  width: 31%;
+  height: 51%;
+  top: 59%;
+  left: 0%;
+  right: 67%;
+}
+
+.rating {
+  display: flex;
+  background-color: #fff;
+  width: 400px;
+  height: 150px;
+  border-radius: 19px;
+}
+.rating .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  height: 100% !important;
+  width: 15% !important;
+  padding-left: 10px;
+}
+.rating .header div {
+  font-size: 230% !important;
+}
+.rating .header p {
+  font-size: 150%;
+  text-align: start !important;
+  width: 100% !important;
+}
+.rating .main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+}
+.rating h1 {
+  font-size: 120% !important;
+  color: #070707 !important;
+  text-align: start !important;
+}
+.rating p {
+  font-size: 80% !important;
+  color: #848fac !important;
+  width: 100% !important;
+  text-align: start !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 95%;
+  margin: 5px auto;
+}
+.navbar .logo {
+  cursor: pointer;
+}
+.navbar .menu {
+  display: none;
+}
+.navbar .settings {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .settings .profile {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+.navbar .settings .profile img {
+  width: 45px;
+  height: 45px;
+}
+.navbar .settings .profile button {
+  background-color: transparent;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.navbar .settings .profile button .LogOut:hover {
+  color: red !important;
+}
+.navbar .settings .settings {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: #848fac;
+}
+.navbar .settings .settings:hover {
+  color: #192252;
+}
+.navbar .settings .notification {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #848fac;
+}
+.navbar .settings .notification:hover {
+  color: #192252;
+}
+
+.container_dashboard {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #dfe8f6;
+}
+.container_dashboard .Divider {
+  height: 100vh;
+  width: 85%;
+  padding-top: 10px;
+  border-left: 1px solid #dfe8f6;
+}
+.container_dashboard .navbar_dashboard {
+  position: relative;
+  background-color: white;
+  width: 230px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+  z-index: 33;
+}
+.container_dashboard .navbar_dashboard .ButtonNavigation {
+  display: flex;
+  justify-content: start;
+  width: 80%;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #848fac;
+  text-decoration: none;
+}
+.container_dashboard .navbar_dashboard .ButtonNavigation:hover {
+  background-color: #f0f9fd;
+  color: #192252;
+}
+.container_dashboard .navbar_dashboard .ButtonNavigation h4 {
+  padding: 0 15px;
+}
+.container_dashboard .navbar_dashboard .mobileProfile {
+  display: none;
+}
+.container_dashboard .sidebar {
+  display: none;
+}
+.container_dashboard .main_container {
+  width: 100%;
+  height: 100%;
+}
+.container_dashboard .main_container .bar_chart {
+  display: flex;
+  width: 100%;
+}
+.container_dashboard .main_container .bar_chart .chart {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container_dashboard .main_container .bar_chart .chart h1 {
+  max-width: 80% !important;
+  font-size: 180%;
+}
+.container_dashboard .main_container .bar_chart .chart .chart_js {
+  border: 1px solid #dfe8f6;
+  padding-left: 25px;
+  border-radius: 9px;
+  position: relative;
+  max-height: 500px;
+  overflow: hidden;
+}
+.container_dashboard .main_container .bar_chart .chart .chart_js h4 {
+  font-size: 130%;
+  padding-left: 15px;
+  color: #192252;
+  font-weight: 900 !important;
+}
+.container_dashboard .main_container .bar_chart .chart .chart_js canvas {
+  width: 100% !important;
+  height: 80% !important;
+}
+.container_dashboard .main_container .bar_chart .Calendar {
+  width: 50%;
+  height: 100%;
+  border: 1px solid #dfe8f6;
+  border-radius: 9px;
+  margin: 15px;
+  padding: 15px;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_title img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element {
+  width: 100%;
+  padding: 5%;
+  border: none;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__navigation .react-calendar__navigation__prev-button {
+  position: absolute;
+  right: 15%;
+  font-size: x-large;
+  color: #192252;
+  padding: 8px;
+  border-radius: 5px;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__navigation .react-calendar__navigation__prev-button:hover {
+  background-color: #c5d0e6;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__navigation .react-calendar__navigation__next-button {
+  position: absolute;
+  left: 85%;
+  font-size: x-large;
+  color: #192252;
+  padding: 5px;
+  border-radius: 5px;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__navigation .react-calendar__navigation__next-button:hover {
+  background-color: #c5d0e6;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__navigation .react-calendar__navigation__label {
+  position: absolute;
+  color: #192252;
+  padding: 10px;
+  border-radius: 5px;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__navigation .react-calendar__navigation__label:hover {
+  background-color: #c5d0e6;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__month-view__weekdays__weekday {
+  color: #192252;
+  text-decoration: none;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__month-view__weekdays__weekday abbr[title] {
+  border-bottom: none !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__month-view__days__day {
+  border-radius: 5px;
+  color: #192252;
+  font-weight: 500;
+  font-size: 100%;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__tile--active {
+  background-color: #56ccf2;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__month-view__days__day--weekend {
+  color: #070707;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Calendar_element .react-calendar__month-view__days__day--weekend::after {
+  content: " ";
+  position: absolute;
+  background-color: red;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translateY(15px) translateX(-8px);
+}
+.container_dashboard .main_container .bar_chart .Calendar .Upcoming {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Upcoming h3 {
+  color: #192252;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Upcoming a {
+  color: #56ccf2 !important;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Monthly_doctor {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 80px;
+  background-color: #f0f9fd;
+  border-radius: 9px;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Monthly_doctor .avatar {
+  background-color: #103f74;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Monthly_doctor .Monthly_doctor_details {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Monthly_doctor .Monthly_doctor_details h4 {
+  margin: 4px 0 !important;
+  text-align: start;
+  width: 100%;
+}
+.container_dashboard .main_container .bar_chart .Calendar .Monthly_doctor .Monthly_doctor_details p {
+  margin: 4px 0 !important;
+  width: 100%;
+}
+.container_dashboard .Medical_History {
+  border: 1px solid #dfe8f6;
+  border-radius: 9px;
+  margin: 2.5%;
+  width: 95%;
+  height: 100%;
+}
+.container_dashboard .Medical_History h2 {
+  color: #192252;
+  font-weight: 700;
+  width: 100%;
+  padding-left: 2.5%;
+}
+.container_dashboard .ProfileComponent {
+  width: 95%;
+  display: block;
+  position: relative;
+  margin: auto 2.5%;
+}
+.container_dashboard .ProfileComponent .ProfileDetails {
+  border-radius: 12px;
+  border: 1px solid #c5d0e6;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .imageBackground {
+  width: 100%;
+  position: relative;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .imageBackground img {
+  min-height: 100px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  -o-object-fit: fill;
+     object-fit: fill;
+  max-height: 250px;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details {
+  position: relative;
+  height: 200px;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .PhotoProfile {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  bottom: 80%;
+  left: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .PhotoProfile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile .DetailsUser {
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile .DetailsUser h2 {
+  color: #103f74;
+  font-size: 150%;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile .DetailsUser p {
+  margin: 0;
+  color: #848fac;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile .DetailsUser .Location {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #c5d0e6;
+  max-width: 150px;
+  border-radius: 40px;
+  margin: 15px;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile .DetailsUser .Location h3 {
+  padding: auto 5px;
+  font-size: 90%;
+  color: #192252;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile .editProfile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-radius: 8px;
+  width: 120px;
+  border: 1px solid #56ccf2;
+  cursor: pointer;
+}
+.container_dashboard .ProfileComponent .ProfileDetails .Details .HeaderProfile .editProfile h5 {
+  padding: 0;
+  margin: 0;
+  color: #56ccf2;
+}
+.container_dashboard .ProfileComponent .ProfileDescription {
+  border: 1px solid #c5d0e6;
+  border-radius: 12px;
+  margin: 20px 0;
+  padding-left: 2%;
+}
+.container_dashboard .ProfileComponent .ProfileDescription h3 {
+  color: #192252;
+  font-weight: 700;
+  font-size: 120%;
+  width: 100%;
+}
+.container_dashboard .ProfileComponent .ProfileDescription p {
+  color: #848fac;
+}
+.container_dashboard .ProfileComponent .ProfileDescription li {
+  color: #848fac;
+  font-size: 100%;
+}
+.container_dashboard .Action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80px;
+}
+.container_dashboard .Action button {
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+.container_dashboard .Action button .iconButton {
+  font-size: "25px";
+  color: "#192252";
+}
+.container_dashboard .editProfilePage {
+  border: 1px solid #c5d0e6;
+  border-radius: 12px;
+  width: 95%;
+  height: 100%;
+  margin: auto 2.5%;
+  padding: 1%;
+}
+.container_dashboard .editProfilePage h1 {
+  font-size: 180%;
+  color: #192252;
+}
+.container_dashboard .editProfilePage p {
+  font-size: 14px;
+  color: #848fac;
+  margin: 0;
+  padding: 0;
+}
+.container_dashboard .editProfilePage h5 {
+  color: #192252;
+  font-size: 100%;
+  margin: 5px;
+  padding: 5px;
+}
+.container_dashboard .editProfilePage .image_bg {
+  border-radius: 25px;
+  overflow: hidden;
+  max-height: 225px;
+  width: 100%;
+}
+.container_dashboard .editProfilePage .image_bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container_dashboard .editProfilePage .change_Image {
+  display: flex;
+  max-height: 100px;
+}
+.container_dashboard .editProfilePage .change_Image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+.container_dashboard .editProfilePage .change_Image button {
+  width: 141px;
+  height: 42px;
+}
+.container_dashboard .editProfilePage .change_Image .change {
+  border: none;
+  background-color: #103f74;
+  color: #ffffff;
+  margin: 5px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.container_dashboard .editProfilePage .change_Image .change:hover {
+  background-color: #848fac;
+}
+.container_dashboard .editProfilePage .change_Image .remove {
+  border: none;
+  background-color: #ffffff;
+  color: #192252;
+  margin: 5px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.container_dashboard .editProfilePage .change_Image .remove:hover {
+  background-color: #848fac;
+  color: #ffffff;
+}
+.container_dashboard .editProfilePage .editInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: "start";
+  margin-top: 10px;
+  width: 100%;
+}
+.container_dashboard .editProfilePage .editInformation label {
+  color: #192252;
+  font-size: 15px;
+  margin-bottom: 3px;
+  margin-left: 16px;
+  width: 100%;
+  text-align: start;
+  font-weight: 700;
+}
+.container_dashboard .editProfilePage .editInformation input {
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid #c5d0e6;
+  background-color: #ffffff;
+  border-radius: 9px;
+  tranistion: border 0.5s;
+  -webkit-tranistion: border 0.5s;
+}
+.container_dashboard .editProfilePage .editInformation input:focus {
+  outline: 0;
+  border-color: #ffffff;
+}
+.container_dashboard .editProfilePage .editInformation .Description {
+  min-height: 100px;
+}
+.container_dashboard .editProfilePage .editInformation .validation {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin: 25px 0 15px;
+}
+.container_dashboard .editProfilePage .editInformation .validation button {
+  width: 141px;
+  height: 42px;
+}
+.container_dashboard .editProfilePage .editInformation .validation .change {
+  border: none;
+  background-color: #103f74;
+  color: #ffffff;
+  margin: 5px 20px;
+  border-radius: 8px;
+  width: 141px;
+  height: 42px;
+  cursor: pointer;
+}
+.container_dashboard .editProfilePage .editInformation .validation .change:hover {
+  background-color: #848fac;
+}
+.container_dashboard .editProfilePage .editInformation .validation .remove {
+  border: none;
+  background-color: #ffffff;
+  color: #192252;
+  margin: 5px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.container_dashboard .editProfilePage .editInformation .validation .remove:hover {
+  background-color: #848fac;
+  color: #ffffff;
+}
+.container_dashboard .MedicalHistoryComponent {
+  width: 100%;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory {
+  width: 450px;
+  height: 120vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(100% - 450px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+  border-bottom: 1px solid #c5d0e6;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .header h3 {
+  color: #192252;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .header button {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body {
+  padding: 15px;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body h5 {
+  color: #192252;
+  text-transform: uppercase;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .PaymentDetail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  font-weight: 500;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .PaymentDetail p {
+  color: #848fac;
+  font-weight: 500;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .PaymentDetail h5 {
+  text-transform: capitalize;
+  font-size: 90%;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .intialpayment {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  border-bottom: 2px dashed #848fac;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .intialpayment div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .intialpayment div p {
+  color: #848fac;
+  font-weight: 500;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .grandtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .grandtotal h3 {
+  color: #192252;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .grandtotal h4 {
+  color: #52bd94;
+  font-weight: 700;
+  font-size: 120%;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .buttonMedical {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #c5d0e6;
+  border-radius: 9px;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .buttonMedical div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory .body .buttonMedical div h3 {
+  color: #192252;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory.hidden_MedicalHistory {
+  transition-timing-function: ease-in-out;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.container_dashboard .MedicalHistoryComponent .DrawerMedicalHistory.Show_MedicalHistory {
+  transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  transform: translateX(0%);
+}
+.container_dashboard .PatientsList {
+  width: 95%;
+  /*     height: 100vh; */
+  margin: 10px 2.5%;
+  border: 1px solid #c5d0e6;
+  border-radius: 9px;
+  padding: 15px;
+}
+.container_dashboard .PatientsList h3 {
+  color: #192252;
+}
+.container_dashboard .PatientsList .SearchBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_dashboard .PatientsList .SearchBar .Filter_Report {
+  display: flex;
+  justify-content: space-between;
+}
+.container_dashboard .PatientsList .SearchBar .Filter_Report button {
+  background-color: #c5d0e6;
+  color: #192252;
+  border: none;
+  border-radius: 8px;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  margin: 0 10px;
+  padding: 10px 15px !important;
+  font-size: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container_dashboard .PatientsList .SearchBar .input-elevated {
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #c5d0e6;
+  background: #ffffff;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%23838D99' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  border-radius: 5px;
+  width: 30%;
+  padding: 0.5em 1em 0.5em 2.5em;
+}
+.container_dashboard .PatientsList .SearchBar .input-elevated::-moz-placeholder {
+  color: #c5d0e6;
+}
+.container_dashboard .PatientsList .SearchBar .input-elevated::placeholder {
+  color: #c5d0e6;
+}
+.container_dashboard .PatientsList .SearchBar .input-elevated:focus {
+  outline: none;
+  box-shadow: 0 4px 10px 0 rgba(8, 5, 199, 0.16);
+}
+.container_dashboard .PatientsList .main_PatientsList {
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile {
+  border-radius: 9px;
+  border: 1px solid #c5d0e6;
+  padding: 15px;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile h5 {
+  color: #192252;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile p {
+  color: #848fac;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile .dt {
+  border-top: 1px solid #848fac;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile button {
+  width: 90%;
+  border: none;
+  background-color: #103f74;
+  color: #ffffff;
+  margin: 5px 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.container_dashboard .PatientsList .main_PatientsList .CardProfile button:hover {
+  background-color: #848fac;
+}
+.container_dashboard .FullCalendar {
+  width: 100%;
+  height: 100vh !important;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 1200) {
+  .main_PatientsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media screen and (max-width: 836px) {
+  .wrapper {
+    /*   overflow: scroll; */
+    padding: 10% 0;
+  }
+  .wrapper .content {
+    padding: 20% 10%;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+  .wrapper .content header h4 {
+    font-size: 90%;
+    margin: 0;
+  }
+  .wrapper .image {
+    display: none;
+  }
+  .navbar .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .container_dashboard .Divider {
+    width: 100%;
+  }
+  .container_dashboard .navbar_dashboard {
+    position: absolute;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    top: 0;
+    padding: 10px 0;
+    height: 108vh !important;
+    background-color: #ffffff;
+  }
+  .container_dashboard .navbar_dashboard .sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_dashboard .navbar_dashboard .sidebar .menu {
+    margin: 0 20px 0 0;
+    cursor: pointer;
+  }
+  .container_dashboard .navbar_dashboard .mobileProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_dashboard .navbar_dashboard .mobileProfile .has-arrow {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 0 8px;
+    color: #848fac;
+  }
+  .container_dashboard .navbar_dashboard .mobileProfile .has-arrow:hover {
+    background-color: #dfe8f6;
+    color: #192252;
+  }
+  .container_dashboard .navbar_dashboard .mobileProfile .has-arrow p {
+    padding: 0 5px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 80%;
+  }
+  .container_dashboard .navbar_dashboard .mobileProfile .has-arrow img {
+    width: 30px;
+  }
+  .container_dashboard .navbar_dashboard.hidden_Navbar {
+    transition-timing-function: ease-in-out;
+    transition: 0.5s;
+    transform: translateX(-100%);
+  }
+  .container_dashboard .navbar_dashboard.Show_Navbar {
+    transition-timing-function: ease-in-out;
+    transition: 0.5s;
+    transform: translateX(0%);
+  }
+  .container_dashboard .main_container {
+    display: block;
+  }
+  .main_container .bar_chart {
+    flex-direction: column-reverse;
+  }
+  .main_container .Calendar {
+    width: 85% !important;
+    height: 100%;
+  }
+  .main_container .Medical_History {
+    width: 90% !important;
+    height: 100% !important;
+    border: none;
+  }
+  .ProfileComponent .ProfileDetails .imageBackground .img {
+    height: 180px !important;
+  }
+  .ProfileComponent .ProfileDetails .Details {
+    position: relative;
+  }
+  .ProfileComponent .ProfileDetails .Details .PhotoProfile {
+    position: absolute;
+    bottom: 90% !important;
+    left: 3%;
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .ProfileComponent .ProfileDetails .Details .DetailsUser {
+    margin-left: 5% !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .ProfileComponent .ProfileDetails .Details .DetailsUser h2 {
+    color: #103f74;
+    font-size: 100% !important;
+  }
+  .ProfileComponent .ProfileDetails .Details .DetailsUser p {
+    margin: 0;
+    color: #848fac;
+    font-size: 80%;
+  }
+  .ProfileComponent .ProfileDetails .Details .DetailsUser .Location {
+    max-width: 110px !important;
+  }
+  .ProfileComponent .ProfileDetails .Details .DetailsUser .Location h3 {
+    padding: auto 5px;
+    font-size: 12px !important;
+    color: #192252;
+  }
+  .ProfileComponent .ProfileDetails .Details .editProfile {
+    width: -moz-max-content !important;
+    width: max-content !important;
+    padding: 0 10px !important;
+  }
+  .ProfileComponent .ProfileDetails .Details .editProfile h5 {
+    display: none;
+  }
+  .ProfileComponent .ProfileDescription p {
+    font-size: 85%;
+  }
+  .ProfileComponent .ProfileDescription li {
+    font-size: 80%;
+  }
+  .editProfilePage .change_Image button {
+    width: 110px !important;
+    height: 35px !important;
+  }
+  .editProfilePage .editInformation .validation {
+    justify-content: center !important;
+  }
+  .editProfilePage .editInformation .validation button {
+    width: 110px !important;
+    height: 35px !important;
+  }
+  .MedicalHistoryComponent {
+    width: 100vw;
+  }
+  .MedicalHistoryComponent .DrawerMedicalHistory {
+    height: 110vh !important;
+    width: 100% !important;
+    background-color: white;
+    left: 0% !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .MedicalHistoryComponent .DrawerMedicalHistory .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+  }
+  .MedicalHistoryComponent .DrawerMedicalHistory .header h3 {
+    color: #192252;
+  }
+  .MedicalHistoryComponent .DrawerMedicalHistory .header button {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+  }
+  .PatientsList .Filter_Report button p {
+    display: none;
+  }
+  .PatientsList .main_PatientsList {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+table * {
+  position: relative;
+}
+table td,
+table th {
+  padding-left: 8px;
+  color: #103f74;
+  font-weight: 600;
+}
+table thead tr {
+  height: 60px;
+  background: #c5d0e6;
+  font-size: 16px;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #e3f1d5;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td,
+table th {
+  text-align: left;
+}
+table td.l,
+table th.l {
+  text-align: right;
+}
+table td.c,
+table th.c {
+  text-align: center;
+}
+table td.r,
+table th.r {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
+.message_error {
+  color: red;
+  font-size: 80%;
+}
+
+@media screen and (max-width: 64em) {
+  table {
+    display: block;
+    padding-bottom: 30px;
+  }
+  table > *,
+  table tr,
+  table td,
+  table th {
+    display: block;
+    padding: 30% auto;
+    font-weight: 500;
+    font-size: 95%;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  table tbody tr td {
+    padding-left: 60%;
+    margin-bottom: 12px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table tbody tr td:nth-child(1):before {
+    content: "Patient";
+  }
+  table tbody tr td:nth-child(2):before {
+    content: "Appointment";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "Date";
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Time";
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "Status";
+  }
+  table tbody tr td:nth-child(6):before {
+    content: "Action";
+  }
+}
+.Medical_History_users {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+.Medical_History_users img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.Medical_History_users div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-left: 6px;
+}
+.Medical_History_users div p {
+  margin: 0;
+  color: #192252;
+  font-weight: 600;
+  width: 100%;
+}
+.Medical_History_users div .id {
+  color: #c5d0e6;
+  font-weight: 500;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #ade8f4 #56ccf2 transparent #ade8f4;
+  box-sizing: border-box;
+  animation: rotation 1.5s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 5px solid;
+  border-color: transparent transparent #261752 #110b66;
+  width: calc(var(--loader-size) - 15px);
+  height: calc(var(--loader-size) - 15px);
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.7s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: calc(var(--loader-size) - 30px);
+  height: calc(var(--loader-size) - 30px);
+  border-color: #fff #fff transparent transparent;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}/*# sourceMappingURL=App.css.map */
